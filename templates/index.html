@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block content %}
+<!--Text and Animated Button Landing Screen -->
+<div class="bg-land-lambo">
+
+    <div class="landTextWrapper">
+        <h2 class=landHeading>Comunity Powered Setup Database</h2>
+        <h4 class=landText>Upload and and download setups for Assetto Corsa Competizione. </h4>
+        <h4 class=landText>We do not sell setups. We rely on the sim-racing community!</h4>
+    </div>
+
+    <div class="landDownBtn">
+
+        <a class=setupsBtn href="#ids"><span id="idss">Setups ▼</span></a>
+    </div>
+</div>
+
+<!-- *** Second Page McLaren Background *** -->
+
+<div id="ids" class="bg-maca">
+    <div id="popupUpload" class="alert success">
+        <span class="closebtn">&times;</span>
+        <strong>You are in Upload Mode!</strong> Just select the Car and Track and you will be prompted to uload
+        your setup. Thank you for helping the community!
+    </div>
+    <h1 class="selectHeading">Select Car</h1>
+    <div class="carWrapper">
+        <div class="carRow1" id="row1">
+            <a href="#selectTrack" id="macca"> <img src="/static/img/cars/720s.png" onclick="carSelect(this)"> </a>
+            <a href="#selectTrack" id="amg"> <img src="/static/img/cars/amgEvo.png" onclick="carSelect(this)"> </a>
+            <a href="#selectTrack" id="amr"> <img src="/static/img/cars/amrV8.png" onclick="carSelect(this)"> </a>
+            <a href="#selectTrack" id="btl"> <img src="/static/img/cars/bentley.png" onclick="carSelect(this)"> </a>
+            <a href="#selectTrack" id="fer"> <img src="/static/img/cars/ferEvo.png" onclick="carSelect(this)"> </a>
+        </div>
+        <div class="carRow2">
+            <a href="#selectTrack" id="hnd"> <img src="/static/img/cars/hondaEvo.png" onclick="carSelect(this)"> </a>
+            <a href="#selectTrack" id="lmb"> <img src="/static/img/cars/lamboEvo.png" onclick="carSelect(this)"> </a>
+            <a href="#selectTrack" id="lex"> <img src="/static/img/cars/lexus.png" onclick="carSelect(this)"> </a>
+            <a href="#selectTrack" id="aud"> <img src="/static/img/cars/audiLMS.png" onclick="carSelect(this)"> </a>
+            <a href="#selectTrack" id="aud"> <img src="/static/img/cars/porcheII.png" onclick="carSelect(this)"> </a>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="selectTrack" class="bg-asphalth">
+    <h1 class="selectHeading">Select Track</h1>
+    <div class="trackWrapper">
+        <div class="trackRow1">
+            <a href="#avaliableSetups" id="brc"> <img src="/static/img/tracks/barc.png" onclick="trackSelect(this)">
+            </a>
+            <a href="#avaliableSetups" id="brh"> <img src="/static/img/tracks/brands.png" onclick="trackSelect(this)">
+            </a>
+            <a href="#avaliableSetups" id="iml"> <img src="/static/img/tracks/imola.png" onclick="trackSelect(this)">
+            </a>
+            <a href="#avaliableSetups" id="mis"> <img src="/static/img/tracks/mis.png" onclick="trackSelect(this)"> </a>
+            <a href="#avaliableSetups" id="moz"> <img src="/static/img/tracks/monza.png" onclick="trackSelect(this)">
+            </a>
+            <a href="#avaliableSetups" id="nrb"> <img src="/static/img/tracks/nurb.png" onclick="trackSelect(this)">
+            </a>
+        </div>
+        
+        <div class="trackRow2">
+            <a href="#avaliableSetups" id="pal"> <img src="/static/img/tracks/paul.png" onclick="trackSelect(this)">
+            </a>
+            <a href="#avaliableSetups" id="slv"> <img src="/static/img/tracks/Silver.png" onclick="trackSelect(this)">
+            </a>
+            <a href="#avaliableSetups" id="spa"> <img src="/static/img/tracks/spa.png" onclick="trackSelect(this)"> </a>
+            <a href="#avaliableSetups" id="znv"> <img src="/static/img/tracks/zandv.png" onclick="trackSelect(this)">
+            </a>
+            <a href="#avaliableSetups" id="zol"> <img src="/static/img/tracks/zold.png" onclick="trackSelect(this)">
+            </a>
+            <a href="#avaliableSetups" id="hun"> <img src="/static/img/tracks/hun.png" onclick="trackSelect(this)"> </a>
+        </div>
+    </div>
+</div>
+
+<div id="avaliableSetups" class="bg-setups">
+    <header class="setupsHeader" id="setupsHeader">Setups</header>
+    <div class="setupWrapper">
+        <div class="columnSetup-1">
+            <h4 class="slCarSetup">Selected Car</h4>
+            <a href="#ids"> <img src="/static/img/cars/selectCar.png" id="testCar"></a>
+            <h4 class=slTrackSetup>Selected Track</h4>
+            <a href="#selectTrack"> <img src="/static/img/tracks/selectTrack.png" id="testTrack"> </a>
+        </div>
+        <div class="uploadSection">
+            <h4 id="uploadHeading">Upload Section</h4>
+            <div class="uploadForm">
+
+                <form action="" onsubmit="return validate()" method="POST" name="uploadForm"
+                    enctype="multipart/form-data">
+
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" placeholder="Max Verstappen" required> <br>
+                    <label for="tracktemp">Track Temp:</label>
+                    <input type="text" name="tracktemp" id="tracktemp" placeholder="23"><br>
+
+                    <div class="hideme">
+                        <label for="car">Car:</label>
+                        <input type="text" name="car" id="carInp" readonly><br>
+                        <label for="track">Track:</label>
+                        <input type="text" name="track" id="trackInp" readonly><br>
+                        <label for="uplBool">Upload:</label>
+                        <input type="text" name="uplBool" id="uplBool" value="no" readonly><br>
+                    </div>
+
+                    <label for="setupNotes" id="steupNotes">Setup Notes:</label><br>
+                    <textarea id="setupNotesInp" name='setupNotes'
+                        placeholder="Ex: laptime: 2:18.8 , quali Setup, maybe change wing..."></textarea>
+                    <div class="submitWrp">
+                        <input type="file" name="file" required>
+                        <input type="submit" onclick="uploadsetups()" value="Submit">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="centeredButton">
+
+
+
+        <!--  <div class="push">
+                <a href="allsetups" onclick="document.getElementById('loadSetupsForm').submit()" >Load Setups
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            -->
+        <form method=POST>
+            <div class="hideme">
+                <input type="text" name="uplBool" id="uplBool" value="no" readonly><br>
+                <label for="car">Car:</label>
+                <input type="text" name="carLoad" id="carLoad" readonly><br>
+                <label for="track">Track:</label>
+                <input type="text" name="trackLoad" id="trackLoad" readonly><br>
+            </div>
+
+            <div class="button2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <button class="btn third" onclick="loadValid()" href="allsetups" type="submit">Load Setups</button>
+            </div>
+        </form>
+
+        </form>
+
+
+        <!-- <a class=undoBtn href="#ids" onclick="undoF()"> <span id="idss">Undo X</span></a> -->
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,1226 @@
+/* Fonts Import | Directory /fonts folder */
+
+
+
+@font-face {
+  font-family: monlight;
+  src: url(/static/fonts/Montserrat-Light.ttf);
+}
+
+
+@font-face {
+  font-family: monmed;
+  src: url(/static/fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: monbold;
+  src: url(/static/fonts/Montserrat-Bold.ttf);
+}
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  background: black;
+}
+
+
+#navbarr {
+  opacity: 0.97;
+  padding: 1px;
+}
+
+#sgMobile {
+  display: none;
+}
+
+/* Setup Garage Navigation Heading Custom Styling */
+
+#SgNavHeading {
+  font-family: monmed;
+  font-size: 22pt;
+  color: rgb(255, 255, 255);
+}
+
+
+/* Navigation Buttons Custom Styling */
+
+#navBtns {
+  font-family: monlight;
+  font-size: 13pt;
+}
+
+
+
+/****** First Page Lamborghini Background ******/
+
+.bg-land-lambo {
+  height: 100%;
+  background: url(/static/img/back/lambolandbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  color: aliceblue;
+  z-index: 10;
+}
+
+/* First Page Headings, Text and Btn Styling and Position */
+
+
+.landTextWrapper {
+  padding-top: min(12vw, 9rem);
+  padding-left: 7%;
+}
+
+.landHeading {
+
+  font-family: monbold;
+  font-size: max(2.5vw, 1.5rem);
+}
+
+
+.landText {
+  font-family: monlight;
+  font-size: max(1.4vw, 0.8rem);
+}
+
+
+.landDownBtn {
+  position: absolute;
+  padding-left: 3vmin;
+  bottom: 6%;
+  left: 7%;
+  font-family: monmed;
+}
+
+/* Animated Setup Button */
+
+
+
+.setupsBtn {
+  display: block;
+  width: 170px;
+  height: 50px;
+  border-radius: 6px;
+  line-height: 48px;
+  font-size: 18px;
+  font-family: monmed;
+  background: rgba(68, 68, 68, 0.83);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  box-shadow: 2px 2px 6px #19282f;
+  text-shadow: 1px 1px 2px #19282f;
+
+
+
+}
+
+.setupsBtn span {
+  position: relative;
+  z-index: 2;
+}
+
+.setupsBtn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #a5465797;
+  transition: all 0.75s;
+  border-radius: 6px;
+
+}
+
+
+.setupsBtn:hover {
+  color: #030202;
+  text-decoration: none;
+
+}
+
+.setupsBtn:hover:after {
+  width: 100%;
+  box-shadow: 0 0 10px 4px #112;
+  transition: all 0.5s ease;
+  transition-delay: 0.3s;
+
+}
+
+
+.setupsBtn:active {
+  transition-duration: 0.3s;
+  color: rgb(0, 0, 0);
+  transform: scale(0.95);
+}
+
+
+
+
+
+
+/***** Second Page McLaren CARS Background ******/
+
+.bg-maca {
+  position: relative;
+  height: 100%;
+  background: url(/static/img/back/macabg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  padding: 1px;
+  color: aliceblue;
+}
+
+/* Second Page McLaren Heading and Buttons */
+
+.selectHeading {
+  font-family: monbold;
+  font-size: max(3.5vw, 2rem);
+  margin-top: min(20vmin, 10vmax);
+  text-align: center;
+  text-shadow: rgb(0, 0, 0);
+  text-shadow: 4px 4px 5px #000000;
+
+}
+
+
+
+/* Select a car buttons */
+.bg-maca img {
+
+  height: auto;
+  width: auto;
+  max-width: 10vw;
+  max-height: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.carWrapper {
+  margin-top: min(15vmin, 10vmax);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+}
+
+.carRow1 {
+  gap: 15px;
+
+}
+
+.carRow2 {
+  gap: 15px;
+}
+
+
+/* Alert Upload Mode */
+
+.alert {
+  position: fixed;
+  top: 10%;
+  right: 3%;
+  max-width: 15vw;
+  min-width: 170px;
+  text-align: center;
+  padding: 11px;
+  background-color: #f44336;
+  color: white;
+  opacity: 0.95;
+  transition: opacity 1s;
+}
+
+.alert.success {
+  background-color: #04AA6D;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+#popupUpload {
+  display: none;
+}
+
+
+
+/* Car  Animation */
+.carRow1 img {
+  transition: transform .3s ease;
+}
+
+.carRow2 img {
+  transition: transform .3s ease;
+}
+
+/* Select car hover animation */
+#macca:hover img {
+  transform: scale(1.05);
+}
+
+#amg:hover img {
+  transform: scale(1.05);
+}
+
+#btl:hover img {
+  transform: scale(1.05);
+}
+
+#amr:hover img {
+  transform: scale(1.05);
+}
+
+#fer:hover img {
+  transform: scale(1.05);
+}
+
+#hnd:hover img {
+  transform: scale(1.05);
+}
+
+#lmb:hover img {
+  transform: scale(1.05);
+}
+
+#lex:hover img {
+  transform: scale(1.05);
+}
+
+#prh:hover img {
+  transform: scale(1.05);
+}
+
+#aud:hover img {
+  transform: scale(1.05);
+}
+
+
+/***** Third Page Asphalt TRACKS Background ******/
+
+
+.bg-asphalth {
+  height: 100%;
+  background: url(/static/img/back/asphbg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  padding: 1px;
+  color: aliceblue;
+
+}
+
+
+
+
+/* Select a track buttons */
+.trackWrapper {
+  margin-top: min(15vmin, 10vmax);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trackRow1 {
+  gap: 15px;
+}
+
+
+.trackRow2 {
+  gap: 15px;
+}
+
+
+
+/* Select a car buttons */
+.bg-asphalth img {
+  height: auto;
+  width: auto;
+  max-width: 12vw;
+  max-height: 8vw;
+  min-width: 90px;
+  min-height: 70px;
+}
+
+
+.trackRow1 img {
+  transition: transform .3s ease;
+}
+
+.trackRow2 img {
+  transition: transform .3s ease;
+}
+
+/* Select Track Hover */
+
+#brh:hover img {
+  transform: scale(1.05);
+}
+
+#iml:hover img {
+  transform: scale(1.05);
+}
+
+#mis:hover img {
+  transform: scale(1.05);
+}
+
+#moz:hover img {
+  transform: scale(1.05);
+}
+
+#nrb:hover img {
+  transform: scale(1.05);
+}
+
+#pal:hover img {
+  transform: scale(1.05);
+}
+
+#slv:hover img {
+  transform: scale(1.05);
+}
+
+#spa:hover img {
+  transform: scale(1.05);
+}
+
+#zol:hover img {
+  transform: scale(1.05);
+}
+
+#znv:hover img {
+  transform: scale(1.05);
+}
+
+#hun:hover img {
+  transform: scale(1.05);
+}
+
+#brc:hover img {
+  transform: scale(1.05);
+}
+
+
+/***** Fourth Page Finishline SETUPS Background ******/
+
+.bg-setups {
+  background: url(/static/img/back/setupsbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding: 1px;
+  color: aliceblue;
+}
+
+/* Animated undo Button 
+.undoBtn {
+  display: block;
+  width: 170px;
+  height: 50px;
+  line-height: 48px;
+  font-size: 18px;
+  font-family: monmed;
+  background: rgba(34, 32, 32, 0.808);
+  text-decoration: none;
+  color: rgb(241, 241, 241);
+  border: 2px solid rgb(122, 122, 122);
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.undoBtn span {
+  position: relative;
+  z-index: 2;
+}
+
+.undoBtn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #f52323b6;
+  transition: all 0.75s;
+}
+
+.undoBtn:hover {
+  color: rgb(0, 0, 0);
+}
+
+.undoBtn:hover:after {
+  width: 100%;
+}
+*/
+
+.centeredButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centeredButton :hover {
+  transition: 0.2s;
+  transform: scale(1.03);
+}
+
+.centeredButton :active {
+  transform: scale(0.99);
+
+}
+
+.setupWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.setupsHeader {
+  text-align: center;
+  font-family: monbold;
+  font-size: max(3.5vw, 2rem);
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1vmin;
+  text-shadow: 0px -7px 10px #000000;
+}
+
+.columnSetup-1 {
+  text-align: center;
+}
+
+#uploadHeading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.uploadSection {
+  margin-top: 20px;
+  border-radius: 25px;
+  border: 2px solid #6a6a6a;
+  background-color: rgba(49, 49, 49, 0.585);
+  padding: 20px;
+  margin-left: 100px;
+}
+
+.uploadSection:hover {
+  box-shadow: 0 0 10px 0 #00000000 inset, 0 0 10px 4px #a91414b6;
+  background-color: rgba(3, 3, 3, 0.83);
+  border: 2px solid rgba(3, 3, 3, 0.83);
+  transition: all 0.3s ease;
+}
+
+#username {
+  width: 285px;
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 8px;
+}
+
+#tracktemp {
+  width: 275px;
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 8px;
+}
+
+#steupNotes {
+  margin-bottom: 10px;
+}
+
+
+textarea {
+  width: 100%;
+  min-height: 80px;
+  padding-right: 0px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+#testCar {
+  width: 10vw;
+  height: 10vw;
+  min-width: 150px;
+  min-height: 150px;
+
+}
+
+
+#testTrack {
+  width: 9.3vw;
+  height: 8vw;
+  min-width: 140px;
+  min-height: 110px;
+}
+
+
+
+
+
+.bg-setupsDb {
+  height: 100%;
+  background: url(/img/back/amgset.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  padding-top: 13vmin;
+
+}
+
+
+
+.downloadTable {
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+#table {
+  background-color: rgba(32, 32, 32, 0.918);
+}
+
+.threeD {
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  transition: 0.2s;
+
+}
+
+.threeD:hover {
+  transition: 0.6s;
+  transform: scale(1.1);
+  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+    1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+    5px 13px 15px black;
+}
+
+.threeD :active {
+  transition: all 0.5s ease;
+  transform: scale(0.87);
+}
+
+.bg-setupsDb {
+  height: 100%;
+  background: url(/static/img/back/lambolandbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  padding-top: 13vmin;
+
+}
+
+.hideme {
+  display: none;
+}
+
+.btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+
+.third {
+  border: 2px solid #6a6a6a;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #323232c1 inset, 0 0 0 0 #030202;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.third:hover {
+  box-shadow: 0 0 10px 0 #00000000 inset, 0 0 10px 4px #a91414b6;
+  background-color: rgba(3, 3, 3, 0.83);
+  border: 2px solid rgba(3, 3, 3, 0.83);
+
+}
+
+
+
+
+.bigwpr {
+  background-image: url(/static/img/guides/lambo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.guides_wrapper {
+  margin-left: 14%;
+  margin-right: 14%;
+  background-color: #070606d5;
+  border-radius: 10px;
+}
+
+.guidesHeading {
+  padding-top: 90px;
+  padding-bottom: 30px;
+  float: centre;
+  text-align: center;
+  font-family: monbold;
+  font-size: 8.1vmin;
+  color: #ffffff;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+
+.guides_wrapper h2 {
+  font-family: monbold;
+  padding: 20px;
+  text-align: center;
+  color: #b3b3b3;
+  margin-bottom: 0;
+}
+
+.guides_wrapper h3 {
+  font-family: monbold;
+  padding: 20px;
+  text-align: center;
+  color: #b3b3b3;
+  margin-bottom: 0;
+}
+
+
+.guides_wrapper p {
+  font-family: monmed;
+  padding: 20px;
+  color: #b3b3b3;
+
+}
+
+
+
+.guides_wrapper img {
+  width: 100%;
+  /* or any custom size */
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.7;
+  border-radius: 20px;
+
+}
+
+
+
+.testHeading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.rowText {
+  display: flex;
+}
+
+.columnText {
+  margin-top: -70px;
+  flex: 50%;
+  font-family: monmed;
+  padding: 20px;
+  color: #b3b3b3;
+}
+
+
+.rowText3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.rowText3 h4 {
+  text-align: center;
+}
+
+.columnText3 {
+  font-family: monmed;
+  padding: 20px;
+  color: #b3b3b3;
+}
+
+
+
+/* About Page Styling */
+
+#particles-js {
+  position: relative;
+  margin-top: 55px;
+  height: 100%;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.aRow1 {
+  max-width: 60rem;
+  width: 90vw;
+  font-family: monmed;
+  color: #b3b3b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: min(7vw, 12rem);
+  left: 50%;
+  transform: translateX(-50%);
+
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+}
+
+
+.columnAbout1 {
+  /* flex: 65%; */
+  text-align: center;
+  font-family: monbold;
+  margin-right: 30px;
+
+}
+
+.columnAbout1 p {
+  font-family: monlight;
+
+}
+
+.columnAbout2 img {
+  /* flex: 35%; */
+  opacity: 0.85;
+
+}
+
+
+.aboutSG {
+  font: monbold;
+}
+
+
+.aRow2 {
+  max-width: 60rem;
+  width: 90vw;
+  font-family: monmed;
+  color: #b3b3b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  margin-top: min(30vw, 30rem);
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+
+}
+
+
+
+
+
+.columnAbout3 {
+  /* flex: 65%; */
+  text-align: center;
+  padding-right: 8vw;
+
+}
+
+.columnAbout3 img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+.columnAbout4 {
+  text-align: center;
+  font-family: monbold;
+
+}
+
+.columnAbout4 p {
+  font-family: monlight;
+
+}
+
+
+
+.columnAbout2 :hover {
+  box-shadow: 0 0 10px 4px rgb(199, 14, 14);
+  transition: all 0.5s ease;
+  transition-delay: 0.1s;
+
+}
+
+.columnAbout3 :hover {
+
+  box-shadow: 0 0 10px 4px rgb(199, 14, 14);
+  transition: all 0.5s ease;
+  transition-delay: 0.1s;
+
+}
+
+
+
+
+/* Uploads */
+
+
+.wrapperUploads {
+  height: 100%;
+  background: url(/static/img/back/bmwcompress.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+
+.uploadText {
+  color: rgb(216, 216, 216);
+  padding-top: 150px;
+}
+
+.uploadText h1 {
+  font-family: monbold;
+  padding-bottom: 5px;
+  text-shadow: 3px 3px 6px #000000b8;
+}
+
+.uploadText h3 {
+  font-family: monmed;
+  font-size: 1.45rem;
+  padding-bottom: 5px;
+  text-shadow: 3px 3px 6px #000000d9;
+}
+
+.uploadText p {
+  font-family: monlight;
+  font-size: 1.3rem;
+  text-shadow: 3px 3px 4px #000000;
+}
+
+.accordion button {
+  font-family: monmed;
+  width: 320px;
+  height: 50px;
+  border-radius: 6px;
+  line-height: 48px;
+  font-size: 18px;
+  font-family: monmed;
+  background: rgba(68, 68, 68, 0.83);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  box-shadow: 2px 2px 6px #19282f;
+  text-shadow: 1px 1px 2px #19282f;
+
+}
+
+.accordion button:hover {
+  color: #030202;
+  background: #a5465797;
+  text-decoration: none;
+  transform: scale(1.04);
+  transition: all 0.5s ease;
+  transition-delay: 0.2s;
+
+}
+
+
+
+
+
+/* Full HD Screems About Fix */
+
+@media screen and (max-width: 1920px) {
+
+  .aRow1 {
+    margin-top: min(7vw, 12rem);
+    font-size: min(1.3vw, 1rem);
+  }
+
+  .aRow2 {
+    margin-top: max(27vw, 20rem);
+    font-size: min(1.3vw, 1rem);
+  }
+
+  .columnAbout2 img {
+    /* flex: 35%; */
+    opacity: 0.85;
+    height: auto;
+    width: auto;
+    max-width: 36vw;
+    max-height: 18vw;
+    min-width: 90px;
+    min-height: 70px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Phones and Low-end Screens */
+
+
+@media only screen and (max-width: 1100px) {
+
+  #SgNavHeading {
+    display: none;
+  }
+
+  #sgMobile {
+    font-family: monmed;
+    font-size: 22pt;
+    color: rgb(255, 255, 255);
+    display: block;
+  }
+
+  .bg-land-lambo {
+    background-position: 80%, 100%;
+  }
+
+  .bg-maca {
+    background-position: 80%, 100%;
+  }
+
+  .landTextWrapper {
+    padding-top: 25%;
+    padding-left: 6%;
+  }
+
+  .bg-maca img {
+    height: auto;
+    width: auto;
+    max-width: 10vw;
+    max-height: 10vw;
+    min-width: 100px;
+    min-height: 100px;
+  }
+
+  .carWrapper {
+    margin-top: 1%;
+    flex-direction: row;
+  }
+
+  .carRow1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    margin-right: 10%;
+  }
+
+  .carRow2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    gap: 2%;
+  }
+
+  .bg-asphalth img {
+   width: 70px;
+    height: 50px;
+}
+  
+  .trackWrapper {
+    margin-top: 1%;
+    flex-direction: row;
+  }
+
+  .trackRow1 {
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    margin-right: 10%;
+  }
+
+  .trackRow2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4%; 
+    margin-left: 10%;
+  }
+
+  .uploadSection {
+    display: none;
+  }
+
+  .aRow1 {
+    width: 75%;
+    margin-top: 8%;
+
+    flex-wrap: wrap-reverse;
+    
+  }
+  
+  .columnAbout1 {
+    /* flex: 65%; */
+    text-align: center;
+    font-family: monbold;
+    margin-right: 0px;
+  }
+  .columnAbout1 p {
+    font-size: 0.8rem;
+  }
+  
+  .columnAbout2 img {
+    border-radius: 3%;
+  }
+  
+  .aboutSG {
+    font-size: 1.8rem;
+    margin-bottom: 3px;
+    margin-top: 10px;
+  }
+  
+  .aRow2 {
+    margin-top: 85%;
+    width: 75%;
+    flex-wrap: wrap;
+  }
+
+   .aboutME{
+    font-size: 1.8rem;
+    margin-bottom: 3px;
+    margin-top: 5px;
+   }
+
+  .columnAbout3 {
+    padding-right: 0;
+
+   }
+  
+  .columnAbout3 img {
+    width: 30%;
+    height: 30%;
+    opacity: 0.9;
+  }
+  
+  .columnAbout4 {
+    font-family: monbold;
+  }
+  
+  .columnAbout4 p {
+    font-family: monlight;
+    font-size: 0.8rem;
+  }
+
+
+  .rowText {
+flex-wrap: wrap;
+  }
+  
+  .columnText {
+    margin-top: 0;
+    padding:0;
+    flex: 100%;
+    font-family: monmed;
+    color: #b3b3b3;
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+  
+  .guides_wrapper{
+    margin-left:8%;
+    margin-right:8%;
+  }
+ 
+
+
+
+}
