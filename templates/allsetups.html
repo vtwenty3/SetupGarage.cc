@@ -7,7 +7,6 @@
     <div class="downloadTable" id="downloadTable">
             
                
-                {% if item %}
                 <table class="table table-striped table-responsive-lg table-dark " id="table">
                 <thead>
                     <tr>
@@ -25,15 +24,12 @@
                     <td>{{item.setupNotes}}</td>
                     <td> <a href={{ url_for ('download', id=item.id)}}>Download</a> </td>
                 </tr>
-                {% endfor %}
-                
-
-      
-
                 {% else %}
-                    <h1>No setups found for this car and track combination.</h1>
-                   <a href="/"> <img  src="/static/img/guides/crying-cat.jpg"></a>
-                {% endif %}
+                <h1>No setups found for this car and track combination.</h1>
+                <a href="/"> <img  src="/static/img/guides/crying-cat.jpg"></a>
+                {% endfor %}
+
+                    
             </tbody>
         </table>  
     </div>
