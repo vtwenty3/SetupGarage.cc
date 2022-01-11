@@ -459,6 +459,21 @@ textarea {
   margin: 50px;
 }
 
+.downloadTable h1{
+  color: rgb(150, 150, 150);
+  text-align: center;
+}
+.downloadTable img{
+  margin-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  height: 35%;
+  border-radius: 15px;
+  opacity: 0.7;
+}
+
 #table {
   background-color: rgba(32, 32, 32, 0.918);
 }
@@ -1014,4 +1029,11 @@ textarea {
     margin: 10px;
     margin-top: 50px;
   }
+
+  .downloadTable img{
+    margin-top: 30px;
+    width: 65%;
+    height: 65%;
+  }
+  
 }
