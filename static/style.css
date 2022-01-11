@@ -36,6 +36,8 @@ body {
 #navbarr {
   opacity: 0.97;
   padding: 1px;
+padding-left:7px;
+padding-right:10px;
 }
 
 #sgMobile {
@@ -1082,7 +1084,10 @@ textarea {
     padding-top: 25%;
     padding-left: 6%;
   }
-
+#navbarr{
+	padding:0px;
+	padding-right:2px;
+}
   .bg-maca img {
     height: auto;
     width: auto;
