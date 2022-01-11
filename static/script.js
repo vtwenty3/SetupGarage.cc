@@ -1,95 +1,64 @@
-function uploadMode() {
-	
-    var popUp = document.getElementById("popupUpload");
-    var y = document.getElementById("uploadBtn");
-    var z = document.getElementById("downloadTable");
-    var u = document.getElementById("setupsHeader");
-    var a = document.getElementById("columnSetup-Upload");
-    u.innerHTML = "Upload a Setup";
-    z.style.display = "none";
-    a.style.display = "flex";
+var close = document.getElementsByClassName("closebtn");
+var i;
+var carSL = 0;
+var trackSL = 0;
+var scroll = new SmoothScroll('a[href*="#"]', {
+  easing: 'easeInOutQuad'
+});
 
-    if (popUp.style.display === "none") {
-      popUp.style.display = "block";
-      m.style.display = "block";
-
-    }
-    else{
-        y.disabled = true;
-        popUp.style.display = "block";
-        z.style.display = "none";
-        m.style.display = "block";
-
-    }
-
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    var div = this.parentElement;
+    div.style.opacity = "0";
   }
-  
-  var close = document.getElementsByClassName("closebtn");
-  var i;
-  var selection = 0;
-  
+}
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function(){
-      var div = this.parentElement;
-      div.style.opacity = "0";
-    }
-  }
+function getName(str) {
+  var Name;
+  Name = str.split('\\').pop().split('/').pop();
+  return (Name.split('.').slice(0, -1).join('.'))
+}
 
-  function getName(str) {
-    var Name;
-    Name = str.split('\\').pop().split('/').pop();
-    return ( Name.split('.').slice(0, -1).join('.'))
-  }
+function carSelect(img) {
+  var ChangeIt = document.getElementById("testCar")
+  var rof = document.getElementById("carInp")
+  var name = img.src;
+  var carLoad = document.getElementById("carLoad")
+  ChangeIt.src = name;
+  rof.value = getName(name);
+  carLoad.value = rof.value;
+  carSL++;
+}
 
-  function carSelect(img) {
-    var ChangeIt = document.getElementById("testCar")
-    var rof = document.getElementById("carInp")
-    var name = img.src;
-    var carLoad = document.getElementById("carLoad")
-    ChangeIt.src = name;
-    rof.value = getName(name);
-    carLoad.value = rof.value;
-     selection ++;
-     
-  }
-
-  function trackSelect(img) {
-    var ChangeIt = document.getElementById("testTrack")
-    var rof = document.getElementById("trackInp")
-    var trackLoad = document.getElementById("trackLoad")
-    var name = img.src;
-    ChangeIt.src = name;
-    rof.value = getName(name);
-    trackLoad.value = rof.value;
-     selection ++;
-
-  }
-
-
-function uploadsetups() {
-	var ChangeIt = document.getElementById("uplBool")
-	ChangeIt.value = "yes"
+function trackSelect(img) {
+  var ChangeIt = document.getElementById("testTrack")
+  var rof = document.getElementById("trackInp")
+  var trackLoad = document.getElementById("trackLoad")
+  var name = img.src;
+  ChangeIt.src = name;
+  rof.value = getName(name);
+  trackLoad.value = rof.value;
+  trackSL++;
 }
 
 
+function uploadsetups() {
+  var ChangeIt = document.getElementById("uplBool")
+  ChangeIt.value = "yes"
+}
 
-
-
-
-function undoF(){
+function undoF() {
   var track = document.getElementById("testTrack");
   var car = document.getElementById("testCar");
   track.src = "img/tracks/selectTrack.png";
   car.src = "img/cars/selectCar.png";
 }
 
-
-function loadValid(){
-	if (selection != 2){
-		alert("Car or Track Not Selected!");
-	    return false;
-	}
+function loadValid() {
+  if (carSL == 0 || trackSL == 0) {
+    alert("Car or Track Not Selected!");
+    return false;
+  }
 }
 
 function validate() {
@@ -103,45 +72,37 @@ function validate() {
   var maxlen = 160;
   // If x is Not a Number or less than one or greater than 10
 
-if (selection != 2){
-	alert("Car or Track Not Selected!");
+  if (carSL == 0 || trackSL == 0) {
+    alert("Car or Track Not Selected!");
     return false;
-}
-
-
+  }
 
   if (username == "") {
     alert("Username must be filled out");
     return false;
-}
-if (isNaN(tracktemp) || tracktemp < 1 || tracktemp > 55) {
-  alert("Tracktemp must be valid number. Do not include \"c\".");
-  return false;
-}
+  }
+  
+  if (isNaN(tracktemp) || tracktemp < 1 || tracktemp > 55) {
+    alert("Tracktemp must be valid number. Do not include \"c\".");
+    return false;
+  }
 
-if(notes.length < mnlen)
-{ 
-alert("Note too short! Try including best lap time and possible improvements. ");
-return false;
+  if (notes.length < mnlen) {
+    alert("Note too short! Try including best lap time and possible improvements. ");
+    return false;
+  } else if (notes.length > maxlen) {
+    alert("Note too long! Maximum chars allowed: " + maxlen + ". Your input:" + notes.length);
+    return false;
+  }
 }
-else if (notes.length > maxlen)
-{ 
-alert("Note too long! Maximum chars allowed: " +maxlen+ ". Your input:" +notes.length);
-return false;
-}
-}
-
-
 
 function redirectF() {
-	timeout = setTimeout(redirectFF, 4000);
-	}
-
-
+  timeout = setTimeout(redirectFF, 7000);
+}
 
 function redirectFF() {
-		window.location.href = '/';
-		}
+  window.location.href = '/';
+}
 
 particlesJS("particles-js", {
   "particles": {
@@ -270,3 +231,24 @@ update = function () {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);;
+
+//Possible usecase 
+// function uploadMode() {
+//   var popUp = document.getElementById("popupUpload");
+//   var y = document.getElementById("uploadBtn");
+//   var z = document.getElementById("downloadTable");
+//   var u = document.getElementById("setupsHeader");
+//   var a = document.getElementById("columnSetup-Upload");
+//   u.innerHTML = "Upload a Setup";
+//   z.style.display = "none";
+//   a.style.display = "flex";
+//   if (popUp.style.display === "none") {
+//     popUp.style.display = "block";
+//     m.style.display = "block";
+//   } else {
+//     y.disabled = true;
+//     popUp.style.display = "block";
+//     z.style.display = "none";
+//     m.style.display = "block";
+//   }
+// }

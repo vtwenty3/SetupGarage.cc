@@ -1,12 +1,8 @@
 /* Fonts Import | Directory /fonts folder */
-
-
-
 @font-face {
   font-family: monlight;
   src: url(/static/fonts/Montserrat-Light.ttf);
 }
-
 
 @font-face {
   font-family: monmed;
@@ -18,26 +14,17 @@
   src: url(/static/fonts/Montserrat-Bold.ttf);
 }
 
-
-
-
-
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   height: 100%;
   background: black;
 }
 
-
 #navbarr {
   opacity: 0.97;
   padding: 1px;
-padding-left:7px;
-padding-right:10px;
+  padding-left: 7px;
+  padding-right: 10px;
 }
 
 #sgMobile {
@@ -45,7 +32,6 @@ padding-right:10px;
 }
 
 /* Setup Garage Navigation Heading Custom Styling */
-
 #SgNavHeading {
   font-family: monmed;
   font-size: 22pt;
@@ -54,7 +40,6 @@ padding-right:10px;
 
 
 /* Navigation Buttons Custom Styling */
-
 #navBtns {
   font-family: monlight;
   font-size: 13pt;
@@ -63,7 +48,6 @@ padding-right:10px;
 
 
 /****** First Page Lamborghini Background ******/
-
 .bg-land-lambo {
   height: 100%;
   background: url(/static/img/back/lambolandbg.jpg);
@@ -75,8 +59,6 @@ padding-right:10px;
 }
 
 /* First Page Headings, Text and Btn Styling and Position */
-
-
 .landTextWrapper {
   padding-top: min(12vw, 9rem);
   padding-left: 7%;
@@ -88,12 +70,10 @@ padding-right:10px;
   font-size: max(2.5vw, 1.5rem);
 }
 
-
 .landText {
   font-family: monlight;
   font-size: max(1.4vw, 0.8rem);
 }
-
 
 .landDownBtn {
   position: absolute;
@@ -104,9 +84,6 @@ padding-right:10px;
 }
 
 /* Animated Setup Button */
-
-
-
 .setupsBtn {
   display: block;
   width: 170px;
@@ -124,9 +101,6 @@ padding-right:10px;
   transition: all .35s;
   box-shadow: 2px 2px 6px #19282f;
   text-shadow: 1px 1px 2px #19282f;
-
-
-
 }
 
 .setupsBtn span {
@@ -144,14 +118,11 @@ padding-right:10px;
   background: #a5465797;
   transition: all 0.75s;
   border-radius: 6px;
-
 }
-
 
 .setupsBtn:hover {
   color: #030202;
   text-decoration: none;
-
 }
 
 .setupsBtn:hover:after {
@@ -159,9 +130,7 @@ padding-right:10px;
   box-shadow: 0 0 10px 4px #112;
   transition: all 0.5s ease;
   transition-delay: 0.3s;
-
 }
-
 
 .setupsBtn:active {
   transition-duration: 0.3s;
@@ -169,13 +138,7 @@ padding-right:10px;
   transform: scale(0.95);
 }
 
-
-
-
-
-
 /***** Second Page McLaren CARS Background ******/
-
 .bg-maca {
   position: relative;
   height: 100%;
@@ -188,7 +151,6 @@ padding-right:10px;
 }
 
 /* Second Page McLaren Heading and Buttons */
-
 .selectHeading {
   font-family: monbold;
   font-size: max(3.5vw, 2rem);
@@ -196,14 +158,10 @@ padding-right:10px;
   text-align: center;
   text-shadow: rgb(0, 0, 0);
   text-shadow: 4px 4px 5px #000000;
-
 }
-
-
 
 /* Select a car buttons */
 .bg-maca img {
-
   height: auto;
   width: auto;
   max-width: 10vw;
@@ -218,63 +176,17 @@ padding-right:10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
-
 }
 
 .carRow1 {
   gap: 15px;
-
 }
 
 .carRow2 {
   gap: 15px;
 }
 
-
-/* Alert Upload Mode */
-
-.alert {
-  position: fixed;
-  top: 10%;
-  right: 3%;
-  max-width: 15vw;
-  min-width: 170px;
-  text-align: center;
-  padding: 11px;
-  background-color: #f44336;
-  color: white;
-  opacity: 0.95;
-  transition: opacity 1s;
-}
-
-.alert.success {
-  background-color: #04AA6D;
-}
-
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.closebtn:hover {
-  color: black;
-}
-
-#popupUpload {
-  display: none;
-}
-
-
-
-/* Car  Animation */
+/* Car Buttons Animation */
 .carRow1 img {
   transition: transform .3s ease;
 }
@@ -324,10 +236,7 @@ padding-right:10px;
   transform: scale(1.05);
 }
 
-
 /***** Third Page Asphalt TRACKS Background ******/
-
-
 .bg-asphalth {
   height: 100%;
   background: url(/static/img/back/asphbg2.jpg);
@@ -336,11 +245,7 @@ padding-right:10px;
   background-position: right bottom;
   padding: 1px;
   color: aliceblue;
-
 }
-
-
-
 
 /* Select a track buttons */
 .trackWrapper {
@@ -355,12 +260,9 @@ padding-right:10px;
   gap: 15px;
 }
 
-
 .trackRow2 {
   gap: 15px;
 }
-
-
 
 /* Select a car buttons */
 .bg-asphalth img {
@@ -372,7 +274,6 @@ padding-right:10px;
   min-height: 70px;
 }
 
-
 .trackRow1 img {
   transition: transform .3s ease;
 }
@@ -381,8 +282,7 @@ padding-right:10px;
   transition: transform .3s ease;
 }
 
-/* Select Track Hover */
-
+/* Track Buttons Animation */
 #brh:hover img {
   transform: scale(1.05);
 }
@@ -433,7 +333,6 @@ padding-right:10px;
 
 
 /***** Fourth Page Finishline SETUPS Background ******/
-
 .bg-setups {
   background: url(/static/img/back/setupsbg.jpg);
   background-repeat: no-repeat;
@@ -442,49 +341,6 @@ padding-right:10px;
   padding: 1px;
   color: aliceblue;
 }
-
-/* Animated undo Button 
-.undoBtn {
-  display: block;
-  width: 170px;
-  height: 50px;
-  line-height: 48px;
-  font-size: 18px;
-  font-family: monmed;
-  background: rgba(34, 32, 32, 0.808);
-  text-decoration: none;
-  color: rgb(241, 241, 241);
-  border: 2px solid rgb(122, 122, 122);
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
-}
-
-.undoBtn span {
-  position: relative;
-  z-index: 2;
-}
-
-.undoBtn:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #f52323b6;
-  transition: all 0.75s;
-}
-
-.undoBtn:hover {
-  color: rgb(0, 0, 0);
-}
-
-.undoBtn:hover:after {
-  width: 100%;
-}
-*/
 
 .centeredButton {
   display: flex;
@@ -499,7 +355,6 @@ padding-right:10px;
 
 .centeredButton :active {
   transform: scale(0.99);
-
 }
 
 .setupWrapper {
@@ -561,7 +416,6 @@ padding-right:10px;
   margin-bottom: 10px;
 }
 
-
 textarea {
   width: 100%;
   min-height: 80px;
@@ -581,9 +435,7 @@ textarea {
   height: 10vw;
   min-width: 150px;
   min-height: 150px;
-
 }
-
 
 #testTrack {
   width: 9.3vw;
@@ -592,10 +444,6 @@ textarea {
   min-height: 110px;
 }
 
-
-
-
-
 .bg-setupsDb {
   height: 100%;
   background: url(/img/back/amgset.png);
@@ -603,10 +451,7 @@ textarea {
   background-size: cover;
   background-position: 100% 100%;
   padding-top: 13vmin;
-
 }
-
-
 
 .downloadTable {
   justify-content: center;
@@ -622,7 +467,6 @@ textarea {
   color: rgb(255, 255, 255);
   white-space: nowrap;
   transition: 0.2s;
-
 }
 
 .threeD:hover {
@@ -645,7 +489,6 @@ textarea {
   background-size: cover;
   background-position: 100% 100%;
   padding-top: 13vmin;
-
 }
 
 .hideme {
@@ -687,7 +530,6 @@ textarea {
   outline: 0;
 }
 
-
 .third {
   border: 2px solid #6a6a6a;
   color: #fff;
@@ -703,15 +545,12 @@ textarea {
 
 }
 
-
-
-
+/* Guides Styling */
 .bigwpr {
   background-image: url(/static/img/guides/lambo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
 }
 
 .guides_wrapper {
@@ -736,7 +575,6 @@ textarea {
     1px 1px 0 #000;
 }
 
-
 .guides_wrapper h2 {
   font-family: monbold;
   padding: 20px;
@@ -753,15 +591,12 @@ textarea {
   margin-bottom: 0;
 }
 
-
 .guides_wrapper p {
   font-family: monmed;
   padding: 20px;
   color: #b3b3b3;
 
 }
-
-
 
 .guides_wrapper img {
   width: 100%;
@@ -770,17 +605,6 @@ textarea {
   object-fit: contain;
   opacity: 0.7;
   border-radius: 20px;
-
-}
-
-
-
-.testHeading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
 }
 
 .rowText {
@@ -794,7 +618,6 @@ textarea {
   padding: 20px;
   color: #b3b3b3;
 }
-
 
 .rowText3 {
   display: flex;
@@ -813,10 +636,35 @@ textarea {
   color: #b3b3b3;
 }
 
+.accordion button {
+  font-family: monmed;
+  width: 320px;
+  height: 50px;
+  border-radius: 6px;
+  line-height: 48px;
+  font-size: 18px;
+  font-family: monmed;
+  background: rgba(68, 68, 68, 0.83);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  box-shadow: 2px 2px 6px #19282f;
+  text-shadow: 1px 1px 2px #19282f;
+}
 
+.accordion button:hover {
+  color: #030202;
+  background: #a5465797;
+  text-decoration: none;
+  transform: scale(1.04);
+  transition: all 0.5s ease;
+  transition-delay: 0.2s;
+}
 
 /* About Page Styling */
-
 #particles-js {
   position: relative;
   margin-top: 55px;
@@ -825,9 +673,6 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
-
 
 .aRow1 {
   max-width: 60rem;
@@ -851,31 +696,25 @@ textarea {
   user-select: none;
 }
 
-
 .columnAbout1 {
   /* flex: 65%; */
   text-align: center;
   font-family: monbold;
   margin-right: 30px;
-
 }
 
 .columnAbout1 p {
   font-family: monlight;
-
 }
 
 .columnAbout2 img {
   /* flex: 35%; */
   opacity: 0.85;
-
 }
-
 
 .aboutSG {
   font: monbold;
 }
-
 
 .aRow2 {
   max-width: 60rem;
@@ -897,18 +736,12 @@ textarea {
   -ms-user-select: none;
   /* IE 10+ */
   user-select: none;
-
 }
-
-
-
-
 
 .columnAbout3 {
   /* flex: 65%; */
   text-align: center;
   padding-right: 8vw;
-
 }
 
 .columnAbout3 img {
@@ -921,37 +754,25 @@ textarea {
 .columnAbout4 {
   text-align: center;
   font-family: monbold;
-
 }
 
 .columnAbout4 p {
   font-family: monlight;
-
 }
-
-
 
 .columnAbout2 :hover {
   box-shadow: 0 0 10px 4px rgb(199, 14, 14);
   transition: all 0.5s ease;
   transition-delay: 0.1s;
-
 }
 
 .columnAbout3 :hover {
-
   box-shadow: 0 0 10px 4px rgb(199, 14, 14);
   transition: all 0.5s ease;
   transition-delay: 0.1s;
-
 }
 
-
-
-
 /* Uploads */
-
-
 .wrapperUploads {
   height: 100%;
   background: url(/static/img/back/bmwcompress.jpg);
@@ -985,42 +806,7 @@ textarea {
   text-shadow: 3px 3px 4px #000000;
 }
 
-.accordion button {
-  font-family: monmed;
-  width: 320px;
-  height: 50px;
-  border-radius: 6px;
-  line-height: 48px;
-  font-size: 18px;
-  font-family: monmed;
-  background: rgba(68, 68, 68, 0.83);
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
-  box-shadow: 2px 2px 6px #19282f;
-  text-shadow: 1px 1px 2px #19282f;
-
-}
-
-.accordion button:hover {
-  color: #030202;
-  background: #a5465797;
-  text-decoration: none;
-  transform: scale(1.04);
-  transition: all 0.5s ease;
-  transition-delay: 0.2s;
-
-}
-
-
-
-
-
 /* Full HD Screems About Fix */
-
 @media screen and (max-width: 1920px) {
 
   .aRow1 {
@@ -1043,23 +829,17 @@ textarea {
     min-width: 90px;
     min-height: 70px;
   }
-
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Phones and Low-end Screens */
-
-
 @media only screen and (max-width: 1100px) {
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 
   #SgNavHeading {
     display: none;
@@ -1084,10 +864,12 @@ textarea {
     padding-top: 25%;
     padding-left: 6%;
   }
-#navbarr{
-	padding:0px;
-	padding-right:2px;
-}
+
+  #navbarr {
+    padding: 0px;
+    padding-right: 2px;
+  }
+
   .bg-maca img {
     height: auto;
     width: auto;
@@ -1117,10 +899,10 @@ textarea {
   }
 
   .bg-asphalth img {
-   width: 70px;
+    width: 70px;
     height: 50px;
-}
-  
+  }
+
   .trackWrapper {
     margin-top: 1%;
     flex-direction: row;
@@ -1136,7 +918,7 @@ textarea {
   .trackRow2 {
     display: flex;
     flex-direction: column;
-    gap: 4%; 
+    gap: 4%;
     margin-left: 10%;
   }
 
@@ -1147,85 +929,89 @@ textarea {
   .aRow1 {
     width: 75%;
     margin-top: 8%;
-
     flex-wrap: wrap-reverse;
-    
   }
-  
+
   .columnAbout1 {
     /* flex: 65%; */
     text-align: center;
     font-family: monbold;
     margin-right: 0px;
   }
+
   .columnAbout1 p {
     font-size: 0.8rem;
   }
-  
+
   .columnAbout2 img {
     border-radius: 3%;
   }
-  
+
   .aboutSG {
     font-size: 1.8rem;
     margin-bottom: 3px;
     margin-top: 10px;
   }
-  
+
   .aRow2 {
     margin-top: 85%;
     width: 75%;
     flex-wrap: wrap;
   }
 
-   .aboutME{
+  .aboutME {
     font-size: 1.8rem;
     margin-bottom: 3px;
     margin-top: 5px;
-   }
+  }
 
   .columnAbout3 {
     padding-right: 0;
+  }
 
-   }
-  
   .columnAbout3 img {
     width: 30%;
     height: 30%;
     opacity: 0.9;
   }
-  
+
   .columnAbout4 {
     font-family: monbold;
   }
-  
+
   .columnAbout4 p {
     font-family: monlight;
     font-size: 0.8rem;
   }
 
-
   .rowText {
-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
-  
+
   .columnText {
     margin-top: 0;
-    padding:0;
+    padding: 0;
     flex: 100%;
     font-family: monmed;
     color: #b3b3b3;
     padding-left: 20px;
     padding-right: 20px;
-
   }
-  
-  .guides_wrapper{
-    margin-left:8%;
-    margin-right:8%;
+
+  .guides_wrapper {
+    margin-left: 8%;
+    margin-right: 8%;
   }
- 
 
+  .accordion button {
+    width: 200px;
+    height: 50px;
+  }
 
-
+  .downloadTable {
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-top: 50px;
+  }
 }
