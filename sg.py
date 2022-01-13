@@ -5,6 +5,7 @@ import string
 import random
 import json
 import os
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
@@ -42,18 +43,17 @@ def home():
             db.session.commit()
             return render_template("uploads.html")
         if uplBool == "no":
-            global carG, trackG
             carG = req['carLoad']
             trackG = req['trackLoad']
-            return redirect(url_for('allsetups'))
+            if (not carG or not trackG):
+                return render_template("index.html")
+            else:
+                return redirect(url_for('allsetups', carArg=carG, trackArg=trackG))
     return render_template('index.html')
     
-@app.route('/allsetups', methods=['GET','POST'])
-def allsetups():
-    if (carG == "" or trackG == ""):
-        return redirect(url_for('home'))
-    else:
-        return render_template('allsetups.html', items=User.query.filter_by(car=carG, track=trackG))
+@app.route('/allsetups/<carArg>/<trackArg>', methods=['GET','POST'])
+def allsetups(carArg, trackArg):
+        return render_template('allsetups.html', items=User.query.filter_by(car=carArg, track=trackArg))
 
 @app.route('/about', methods=['GET','POST'])
 def about():
